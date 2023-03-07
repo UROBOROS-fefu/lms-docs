@@ -32,18 +32,24 @@
 \newcommand{\fefustudent}[3]{
 	{
 		\parindent 0pt
-		\begin{multicols}{2}
-			\vfill{\null}
-			\columnbreak
+		\hfill
+		\begin{minipage}{.55\textwidth}
 			Выполнили студенты\newlineгр. #1\newline
 			$\underset{\textit{(ФИО)}}{\text{\uline{ #2 }}}$
-			$\underset{\textit{(подпись)}}{\text{\uline{\hspace{50pt}}}}$
+			$\underset{\textit{(подпись)}}{\text{\uline{\hspace{60pt}}}}$
 
 			\vspace{10pt}
 
 			$\underset{\textit{(ФИО)}}{\text{\uline{ #3 }}}$
-			$\underset{\textit{(подпись)}}{\text{\uline{\hspace{50pt}}}}$
-		\end{multicols}
+			$\underset{\textit{(подпись)}}{\text{\uline{\hspace{60pt}}}}$
+
+			\vspace{10pt}
+
+			Руководитель\newline
+			$\underset{\textit{(должность)}}{\text{\uline{ ст. преподаватель }}}$
+			$\underset{\textit{(ФИО)}}{\text{\uline{ Кленина Н.В. }}}$\newline
+			$\underset{\textit{(подпись)}}{\text{\uline{\hspace{60pt}}}}$
+		\end{minipage}
 	}
 }
 
@@ -51,38 +57,25 @@
 	\pagestyle{empty}
 	\begin{center}
 		\includegraphics[scale=0.2]{fefulogo.pdf}
+
 		\vspace{10pt}
-
-		{\large МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ РОССИЙСКОЙ ФЕДЕРАЦИИ}
-
-		{\large \selectfont Федеральное государственное автономное образовательное учреждение высшего образования\linebreak}
+		МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ РОССИЙСКОЙ ФЕДЕРАЦИИ\linebreak
+		Федеральное государственное автономное образовательное учреждение высшего образования\linebreak
 		\textbf{«Дальневосточный федеральный университет»\linebreak(ДВФУ)}
 
 		\fefurule{3pt}{1pt}{1pt}
+		{\textbf{Институт математики и компьютерных технологий}}
 
-		\textbf{Институт математики и компьютерных технологий}
+		\vspace{3pt}
+		{\textbf{Департамент математического и компьютерного моделирования}}
 
-		\vspace{10pt}
-		\textbf{Департамент математического и компьютерного моделирования}
+		\vspace{20pt}
+		{\textbf{ОТЧЕТ}}
 
-		\vspace{30pt}
+		#1 по дисциплине \linebreak <<#2>>
 
-		{\large\textbf{НАЗВАНИЕ}}
-
-		\vspace{12pt}
-
-		{
-			\fontsize{16}{17}\selectfont
-			#1 по дисциплине \linebreak <<#2>>
-		}
-
-
-		\vspace{12pt}
-
-		{
-			\fontsize{16}{16}\selectfont
-			Направление подготовки \linebreak #3 <<#4>>
-		}
+		\vspace{24pt}
+		{\Large«Корпоративная библиотека»}
 
 	\end{center}
 
