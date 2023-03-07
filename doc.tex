@@ -6,6 +6,7 @@
 \usepackage{indentfirst}
 \usepackage{tocloft}
 \usepackage{hyperref}
+\usepackage{setspace}
 \hypersetup{
     colorlinks,
     citecolor=black,
@@ -24,6 +25,8 @@
 	\end{titlepage}
 	\tableofcontents
 	\clearpage
-	\subfile{parts/annotation.tex}
-	\subfile{parts/intro.tex}
+	\begin{onehalfspace}
+		\subfile{parts/annotation.tex}
+		\subfile{parts/intro.tex}
+	\end{onehalfspace}
 \end{document}
