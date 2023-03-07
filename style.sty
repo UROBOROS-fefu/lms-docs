@@ -1,0 +1,119 @@
+\RequirePackage[russian]{babel} 
+\RequirePackage{hyperref}
+\RequirePackage{graphicx}
+\RequirePackage{multicol}
+\RequirePackage{amsmath}
+\RequirePackage{float}
+\RequirePackage{datetime2}
+\RequirePackage{geometry}
+\RequirePackage{listings}
+\RequirePackage{xcolor}
+\RequirePackage{caption}
+
+
+\DTMsavenow{now}
+
+\newcommand{\newsection}[1]{\section*{#1}\addcontentsline{toc}{section}{#1}}
+\newcommand{\newsubsection}[1]{\subsection*{#1}\addcontentsline{toc}{subsection}{#1}}
+
+
+\newcommand{\fefurule}[3]{
+	\noindent\rule{\textwidth}{#1}
+
+	\vspace{\dimexpr -16pt + #3}
+
+	\noindent\rule{\textwidth}{#2}
+}
+
+\newcommand{\uline}[1]{%
+	\underline{#1\vphantom{lp}}%
+}
+
+\newcommand{\fefustudent}[3]{
+	{
+		\parindent 0pt
+		\begin{multicols}{2}
+			\vfill{\null}
+			\columnbreak
+			Выполнили студенты\newlineгр. #1\newline
+			$\underset{\textit{(ФИО)}}{\text{\uline{ #2 }}}$
+			$\underset{\textit{(подпись)}}{\text{\uline{\hspace{50pt}}}}$
+
+			\vspace{10pt}
+
+			$\underset{\textit{(ФИО)}}{\text{\uline{ #3 }}}$
+			$\underset{\textit{(подпись)}}{\text{\uline{\hspace{50pt}}}}$
+		\end{multicols}
+	}
+}
+
+\newcommand{\fefutitlepage}[7]{
+	\pagestyle{empty}
+	\begin{center}
+		\includegraphics[scale=0.2]{fefulogo.pdf}
+		\vspace{10pt}
+
+		{
+			\fontsize{9}{9}
+			\selectfont МИНИСТЕРСТВО НАУКИ И ВЫСШЕГО ОБРАЗОВАНИЯ РОССИЙСКОЙ ФЕДЕРАЦИИ
+		}
+
+		{
+			\fontsize{10}{10}
+			\selectfont Федеральное государственное автономное образовательное учреждение высшего образования
+		}
+		\textbf{«Дальневосточный федеральный университет»\linebreak(ДВФУ)}
+
+		\fefurule{3pt}{1pt}{1pt}
+
+		\textbf{Институт математики и компьютерных технологий}
+
+		\vspace{10pt}
+		\textbf{Департамент математики и компьютерного моделирования}
+
+		\vspace{30pt}
+		\textbf{ОТЧЕТ}
+
+		\vspace{12pt}
+		#1 по дисциплине \linebreak <<#2>>
+
+		\vspace{12pt}
+
+		Направление подготовки \linebreak #3 <<#4>>
+	\end{center}
+
+	\vspace{12pt}
+	\fefustudent{#5}{#6}{#7}
+	
+	\vfill
+
+	\begin{center}
+		\textbf{г. Владивосток \linebreak \the\year{}}
+	\end{center}
+}
+
+
+\definecolor{background}{RGB}{255, 250, 255}
+\definecolor{npurple}{RGB}{64, 27, 111}
+\definecolor{nblue}{RGB}{45, 54, 148}
+\definecolor{ncyan}{RGB}{42,161,151}
+
+\lstdefinestyle{solarizedcsharp} {
+	backgroundcolor=\color{background},
+	language=[Sharp]C,
+	frame=single,
+	linewidth=160mm,
+	breaklines=true,
+	tabsize=2,
+	numbers=left,
+	numberstyle=\small,
+	numbersep=8pt,
+	rulecolor=\color{npurple},
+	basicstyle=\footnotesize\ttfamily,
+	morekeywords={new, struct,this, bool, false, true, for, private, char, foreach, protected, public, class, if, const, return, using, int, default, while, double, else,static, namespace, string},
+	keywordstyle=\bfseries\color{npurple},
+	showstringspaces=false,
+	stringstyle=\color{ncyan},
+	identifierstyle=\color{nblue}}
+
+\lstset{escapechar=@,style=solarizedcsharp}
