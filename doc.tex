@@ -1,10 +1,18 @@
 \documentclass[14pt, fleqn, a4paper]{extarticle}
+\usepackage[T1, T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english, russian]{babel}
+
+\usepackage[backend=biber]{biblatex}
+\addbibresource{biblio.bib}
+
 \usepackage{style}
 \usepackage{geometry}
 \usepackage{import}
 \usepackage{subfiles}
 \usepackage{indentfirst}
 \usepackage{tocloft}
+\usepackage{xurl}
 \usepackage{hyperref}
 \usepackage{setspace}
 \hypersetup{
@@ -12,13 +20,15 @@
     citecolor=black,
     filecolor=black,
     linkcolor=black,
-    urlcolor=black
+    urlcolor=black,
+	breaklinks=true
 }
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 
 \setlength{\parindent}{1cm}
 
 \begin{document}
+	\nocite{*}
 	\newgeometry{left=3cm, top=1cm, right=1cm, bottom=2cm}
 	\begin{titlepage}
 		{
@@ -31,5 +41,6 @@
 	\begin{onehalfspace}
 		\subfile{parts/annotation.tex}
 		\subfile{parts/intro.tex}
+		\printbibliography
 	\end{onehalfspace}
 \end{document}
