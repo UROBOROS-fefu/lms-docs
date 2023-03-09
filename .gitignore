@@ -4,3 +4,11 @@
 *.synctex*
 *.toc
 *.pdf
+*.bbl
+*.bcf
+*.blg
+*.dvi
+*.fdb_latexmk
+*.fls
+*.run.xml
+*.xdv
