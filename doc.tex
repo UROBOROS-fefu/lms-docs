@@ -14,6 +14,7 @@
 \usepackage{tocloft}
 \usepackage{xurl}
 \usepackage{hyperref}
+\usepackage{enumitem}
 \usepackage{setspace}
 \hypersetup{
     colorlinks,
@@ -26,6 +27,8 @@
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
 
 \setlength{\parindent}{1cm}
+
+\setlist[description]{style=nextline}
 
 \begin{document}
 	\nocite{*}
