@@ -2,7 +2,6 @@
 \usepackage[T1, T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[english, russian]{babel}
-
 \usepackage[backend=biber]{biblatex}
 \addbibresource{biblio.bib}
 
@@ -16,6 +15,7 @@
 \usepackage{hyperref}
 \usepackage{enumitem}
 \usepackage{setspace}
+\usepackage{tabularray}
 \hypersetup{
     colorlinks,
     citecolor=black,
@@ -25,6 +25,12 @@
 	breaklinks=true
 }
 \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+\newcommand{\asection}[2]{
+\setcounter{section}{#1}
+\addtocounter{section}{-1}
+\section{#2}
+}
 
 \setlength{\parindent}{1cm}
 
