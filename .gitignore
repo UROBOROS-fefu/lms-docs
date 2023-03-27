@@ -12,3 +12,6 @@
 *.fls
 *.run.xml
 *.xdv
+
+!Отчет.pdf
+!План.pdf
