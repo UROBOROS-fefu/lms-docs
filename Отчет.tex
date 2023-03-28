@@ -32,6 +32,12 @@
 \section{#2}
 }
 
+\newcommand{\asubsection}[2]{
+	\setcounter{subsection}{#1}
+	\addtocounter{subsection}{-1}
+	\subsection{#2}
+}
+
 \setlength{\parindent}{1cm}
 
 \setlist[description]{style=nextline}
@@ -51,6 +57,8 @@
 		\subfile{parts/annotation.tex}
 		\subfile{parts/intro.tex}
 		\subfile{parts/functional-needs.tex}
+		\subfile{parts/interface-needs.tex}
+		\subfile{parts/project.tex}
 		\clearpage
 		\printbibliography
 	\end{onehalfspace}
