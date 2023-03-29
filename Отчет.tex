@@ -16,6 +16,7 @@
 \usepackage{enumitem}
 \usepackage{setspace}
 \usepackage{tabularray}
+\usepackage{graphicx}
 \hypersetup{
     colorlinks,
     citecolor=black,
@@ -56,6 +57,11 @@
 	\begin{onehalfspace}
 		\subfile{parts/annotation.tex}
 		\subfile{parts/intro.tex}
+		\begin{figure}[H]
+			\includegraphics[width=\textwidth]{graphics/usecase-uml.png}	
+			\caption{Диаграмма вариантов использования}
+			\label{pic:1}
+		\end{figure}
 		\subfile{parts/functional-needs.tex}
 		\subfile{parts/interface-needs.tex}
 		\subfile{parts/project.tex}
